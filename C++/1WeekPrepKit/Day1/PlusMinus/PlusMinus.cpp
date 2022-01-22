@@ -1,10 +1,11 @@
-#include <bits/stdc++.h>
+//
+// Created by Sanel Programmer on 22.01.2022.
+//
 
+#include <bits/stdc++.h>
+#include "../../trim.h"
 using namespace std;
 
-string ltrim(const string &);
-string rtrim(const string &);
-vector<string> split(const string &);
 
 /*
  * Complete the 'plusMinus' function below.
@@ -13,33 +14,33 @@ vector<string> split(const string &);
  */
 
 void plusMinus(vector<int> arr, int n) {
-float nPos=0;
-float nNeg=0;
-float nZer=0;
-int i=0;
-int l=n;//sizeof(arr)/sizeof(int);
-while (i<l) {
+    float nPos=0;
+    float nNeg=0;
+    float nZer=0;
+    int i=0;
+    int l=n;//sizeof(arr)/sizeof(int);
+    while (i<l) {
 
-    if(arr[i]<0){
-        nNeg++;
-    }else if (arr[i]==0) {
-        nZer++;
+        if(arr[i]<0){
+            nNeg++;
+        }else if (arr[i]==0) {
+            nZer++;
+        }
+        else{
+            nPos++;
+        }
+        i++;
+
     }
-    else{
-        nPos++;
-    }
-    i++;
-
-}
-cout<<showpoint;
-cout<<nPos/l;
-cout<<'\n';
-cout<<nNeg/l;
-cout<<'\n';
-cout<<nZer/l;
+    cout<<showpoint;
+    cout<<nPos/l;
+    cout<<'\n';
+    cout<<nNeg/l;
+    cout<<'\n';
+    cout<<nZer/l;
 }
 
-int main()
+int PlusMinus()
 {
     string n_temp;
     getline(cin, n_temp);
@@ -64,41 +65,3 @@ int main()
     return 0;
 }
 
-string ltrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        s.begin(),
-        find_if(s.begin(), s.end(), not1(ptr_fun<int, int>(isspace)))
-    );
-
-    return s;
-}
-
-string rtrim(const string &str) {
-    string s(str);
-
-    s.erase(
-        find_if(s.rbegin(), s.rend(), not1(ptr_fun<int, int>(isspace))).base(),
-        s.end()
-    );
-
-    return s;
-}
-
-vector<string> split(const string &str) {
-    vector<string> tokens;
-
-    string::size_type start = 0;
-    string::size_type end = 0;
-
-    while ((end = str.find(" ", start)) != string::npos) {
-        tokens.push_back(str.substr(start, end - start));
-
-        start = end + 1;
-    }
-
-    tokens.push_back(str.substr(start));
-
-    return tokens;
-}
