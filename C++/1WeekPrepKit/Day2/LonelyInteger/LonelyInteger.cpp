@@ -1,5 +1,5 @@
 //
-// Created by Sanel Programmer on 22.01.2022.
+// Created by OmnissiahPriest on 22.01.2022.
 //
 
 #include <bits/stdc++.h>

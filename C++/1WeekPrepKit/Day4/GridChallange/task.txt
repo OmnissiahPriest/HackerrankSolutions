@@ -35,10 +35,15 @@ STDIN   Function
 1       t = 1
 5       n = 5
 ebacd   grid = ['ebacd', 'fghij', 'olmkn', 'trpqs', 'xywuv']
+
+1
+5
+ebacd
 fghij
 olmkn
 trpqs
 xywuv
+
 Sample Output
 
 YES

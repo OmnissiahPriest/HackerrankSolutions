@@ -1,0 +1,40 @@
+https://www.hackerrank.com/challenges/one-week-preparation-kit-recursive-digit-sum
+
+
+Function Description
+
+Complete the function superDigit in the editor below. It must return the calculated super digit as an integer.
+
+superDigit has the following parameter(s):
+
+string n: a string representation of an integer
+int k: the times to concatenate  to make
+Returns
+
+int: the super digit of  repeated  times
+Input Format
+
+9875 4
+
+The first line contains two space separated integers, n  and K .
+
+Output
+
+8
+
+Example
+
+n=9875
+k=4
+
+The number  is created by concatenating the string n, k times so the initial .
+
+
+
+    superDigit(p) = superDigit(9875987598759875)
+                  9+8+7+5+9+8+7+5+9+8+7+5+9+8+7+5 = 116
+    superDigit(p) = superDigit(116)
+                  1+1+6 = 8
+    superDigit(p) = superDigit(8)
+
+
